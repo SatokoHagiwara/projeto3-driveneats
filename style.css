@@ -30,7 +30,8 @@ header h2 {
   line-height: 21px;
 }
 main {
-  padding-left: 20px;
+  margin-bottom: 130px;
+  padding: 0 20px;
 }
 .food-container {
   margin-top: 40px;
@@ -100,4 +101,34 @@ h4 {
 .food-box h4,
 .food-box p {
   margin-bottom: 10px;
+}
+footer {
+  align-items: center;
+  background: #ffffff;
+  bottom: 0;
+  display: flex;
+  height: 92px;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100vw;
+}
+.select-items {
+  align-items: center;
+  background: #cbcbcb;
+  border-radius: 50px;
+  height: 61px;
+  padding: 5px 60px;
+  text-align: center;
+  width: 364px;
+}
+.select-items p {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.018em;
+  line-height: 23px;
 }
