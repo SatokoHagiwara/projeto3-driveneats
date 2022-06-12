@@ -81,28 +81,28 @@ function seeOrder() {
     total = dishPrice + drinkPrice + dessertPrice;
 
     confirmOrderOverlay.querySelector(
-      ".dish-order .dish-order-name"
+      ".dish-order-name"
     ).innerHTML = dishName;
     confirmOrderOverlay.querySelector(
-      ".dish-order .dish-order-price"
+      ".dish-order-price"
     ).innerHTML = `R$ ${dishPrice.toFixed(2)}`;
 
     confirmOrderOverlay.querySelector(
-      ".drink-order .drink-order-name"
+      ".drink-order-name"
     ).innerHTML = drinkName;
     confirmOrderOverlay.querySelector(
-      ".drink-order .drink-order-price"
+      ".drink-order-price"
     ).innerHTML = `R$ ${drinkPrice.toFixed(2)}`;
 
     confirmOrderOverlay.querySelector(
-      ".dessert-order .dessert-order-name"
+      ".dessert-order-name"
     ).innerHTML = dessertName;
     confirmOrderOverlay.querySelector(
-      ".dessert-order .dessert-order-price"
+      ".dessert-order-price"
     ).innerHTML = `R$ ${dessertPrice.toFixed(2)}`;
 
     confirmOrderOverlay.querySelector(
-      ".order-price .total-order-price"
+      ".total-order-price"
     ).innerHTML = `R$ ${total.toFixed(2)}`;
   }
 }
