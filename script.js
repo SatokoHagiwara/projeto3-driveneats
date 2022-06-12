@@ -32,8 +32,8 @@ function selectDish(element) {
     selectedFood.classList.remove("selected");
   }
   element.classList.add("selected");
-  dishName = document.querySelector(".dish-name").innerHTML;
-  dishPrice = document.querySelector(".dish-price").innerHTML;
+  dishName = document.querySelector(".selected .dish-name").innerHTML;
+  dishPrice = document.querySelector(".selected .dish-price").innerHTML;
   dishPrice = convertDishPrice(dishPrice);
 
   closeOrder();
@@ -44,8 +44,8 @@ function selectDrink(element) {
     selectedFood.classList.remove("selected");
   }
   element.classList.add("selected");
-  drinkName = document.querySelector(".drink-name").innerHTML;
-  drinkPrice = document.querySelector(".drink-price").innerHTML;
+  drinkName = document.querySelector(".selected .drink-name").innerHTML;
+  drinkPrice = document.querySelector(".selected .drink-price").innerHTML;
   drinkPrice = convertDrinkPrice(drinkPrice);
 
   closeOrder();
@@ -56,8 +56,8 @@ function selectDessert(element) {
     selectedFood.classList.remove("selected");
   }
   element.classList.add("selected");
-  dessertName = document.querySelector(".dessert-name").innerHTML;
-  dessertPrice = document.querySelector(".dessert-price").innerHTML;
+  dessertName = document.querySelector(".selected .dessert-name").innerHTML;
+  dessertPrice = document.querySelector(".selected .dessert-price").innerHTML;
   dessertPrice = convertDessertPrice(dessertPrice);
 
   closeOrder();
@@ -80,23 +80,19 @@ function seeOrder() {
 
     total = dishPrice + drinkPrice + dessertPrice;
 
-    confirmOrderOverlay.querySelector(
-      ".dish-order-name"
-    ).innerHTML = dishName;
+    confirmOrderOverlay.querySelector(".dish-order-name").innerHTML = dishName;
     confirmOrderOverlay.querySelector(
       ".dish-order-price"
     ).innerHTML = `R$ ${dishPrice.toFixed(2)}`;
 
-    confirmOrderOverlay.querySelector(
-      ".drink-order-name"
-    ).innerHTML = drinkName;
+    confirmOrderOverlay.querySelector(".drink-order-name").innerHTML =
+      drinkName;
     confirmOrderOverlay.querySelector(
       ".drink-order-price"
     ).innerHTML = `R$ ${drinkPrice.toFixed(2)}`;
 
-    confirmOrderOverlay.querySelector(
-      ".dessert-order-name"
-    ).innerHTML = dessertName;
+    confirmOrderOverlay.querySelector(".dessert-order-name").innerHTML =
+      dessertName;
     confirmOrderOverlay.querySelector(
       ".dessert-order-price"
     ).innerHTML = `R$ ${dessertPrice.toFixed(2)}`;
