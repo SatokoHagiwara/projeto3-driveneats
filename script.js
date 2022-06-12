@@ -6,7 +6,7 @@ let dishPrice;
 let drinkPrice;
 let dessertPrice;
 
-let total;
+let total = 0;
 
 function convertDishPrice(dishPrice) {
   dishPrice = dishPrice.replace("R$", "").replace(",", ".");
