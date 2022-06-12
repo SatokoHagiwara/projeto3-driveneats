@@ -22,6 +22,43 @@
     />
   </head>
   <body>
+    <div class="overlay display-none">
+      <div class="see-order">
+        <div class="confirm-order-title">Confirme seu pedido</div>
+        <ul>
+          <li class="dish-order">
+            <div class="dish-order-name"></div>
+            <div class="dish-order-price"></div>
+          </li>
+          <li class="drink-order">
+            <div class="drink-order-name"></div>
+            <div class="drink-order-price"></div>
+          </li>
+          <li class="dessert-order">
+            <div class="dessert-order-name"></div>
+            <div class="dessert-order-price"></div>
+          </li>
+          <li class="order-price">
+            <div>TOTAL</div>
+            <div class="total-order-price"></div>
+          </li>
+        </ul>
+        <button
+          class="button-confirm-order"
+          type="submit"
+          onclick="confirmOrder();"
+        >
+          Tudo certo, pode pedir!
+        </button>
+        <button
+          class="button-cancel-order"
+          type="submit"
+          onclick="cancelOrder();"
+        >
+          Cancelar
+        </button>
+      </div>
+    </div>
     <header>
       <h1>DrivenEats</h1>
       <h2>Sua comida em 6 minutos</h2>
@@ -32,30 +69,30 @@
         <div class="food-informations-container dish-container">
           <div class="food-box" onclick="selectDish(this);">
             <img src="images/dish.jpg" alt="Bowl vegetariano" />
-            <h4>Bowl vegetariano</h4>
+            <h4 class="dish-name">Bowl vegetariano P</h4>
             <p>Tigela pequena</p>
-            <p>R$ 21,59</p>
+            <p class="dish-price">R$ 21,59</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div class="food-box" onclick="selectDish(this);">
             <img src="images/dish.jpg" alt="Bowl vegetariano" />
-            <h4>Bowl vegetariano</h4>
+            <h4 class="dish-name">Bowl vegetariano M</h4>
             <p>Tigela média</p>
-            <p>R$ 33,57</p>
+            <p class="dish-price">R$ 33,57</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div class="food-box" onclick="selectDish(this);">
             <img src="images/dish.jpg" alt="Bowl vegetariano" />
-            <h4>Bowl vegetariano</h4>
+            <h4 class="dish-name">Bowl vegetariano G</h4>
             <p>Tigela grande</p>
-            <p>R$ 47,65</p>
+            <p class="dish-price">R$ 47,65</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div class="food-box" onclick="selectDish(this);">
             <img src="images/dish.jpg" alt="Bowl vegetariano" />
-            <h4>Bowl vegetariano</h4>
+            <h4 class="dish-name">Bowl vegetariano GG</h4>
             <p>Tigela muito grande</p>
-            <p>R$ 55,86</p>
+            <p class="dish-price">R$ 55,86</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
         </div>
@@ -65,30 +102,30 @@
         <div class="food-informations-container drink-container">
           <div class="food-box" onclick="selectDrink(this);">
             <img src="images/drink.jpg" alt="Água saborizada" />
-            <h4>Água saborizada</h4>
+            <h4 class="drink-name">Água saborizada P</h4>
             <p>Copo de 250ml</p>
-            <p>R$ 12,53</p>
+            <p class="drink-price">R$ 12,53</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div class="food-box" onclick="selectDrink(this);">
             <img src="images/drink.jpg" alt="Água saborizada" />
-            <h4>Água saborizada</h4>
+            <h4 class="drink-name">Água saborizada M</h4>
             <p>Copo de 350ml</p>
-            <p>R$ 19,22</p>
+            <p class="drink-price">R$ 19,22</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div class="food-box" onclick="selectDrink(this);">
             <img src="images/drink.jpg" alt="Água saborizada" />
-            <h4>Água saborizada</h4>
+            <h4 class="drink-name">Água saborizada G</h4>
             <p>Copo de 450ml</p>
-            <p>R$ 27,85</p>
+            <p class="drink-price">R$ 27,85</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div class="food-box" onclick="selectDrink(this);">
             <img src="images/drink.jpg" alt="Água saborizada" />
-            <h4>Água saborizada</h4>
+            <h4 class="drink-name">Água saborizada 1L</h4>
             <p>Garrafa de 1l</p>
-            <p>R$ 43,36</p>
+            <p class="drink-price">R$ 43,36</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
         </div>
@@ -98,39 +135,39 @@
         <div class="food-informations-container dessert-container">
           <div class="food-box" onclick="selectDessert(this);">
             <img src="images/dessert.jpg" alt="Torta de pêssego" />
-            <h4>Torta de pêssego</h4>
+            <h4 class="dessert-name">Torta de pêssego P</h4>
             <p>Fatia pequena</p>
-            <p>R$ 16,70</p>
+            <p class="dessert-price">R$ 16,70</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div class="food-box" onclick="selectDessert(this);">
             <img src="images/dessert.jpg" alt="Torta de pêssego" />
-            <h4>Torta de pêssego</h4>
+            <h4 class="dessert-name">Torta de pêssego M</h4>
             <p>Fatia média</p>
-            <p>R$ 22,45</p>
+            <p class="dessert-price">R$ 22,45</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div class="food-box" onclick="selectDessert(this);">
             <img src="images/dessert.jpg" alt="Torta de pêssego" />
-            <h4>Torta de pêssego</h4>
+            <h4 class="dessert-name">Torta de pêssego G</h4>
             <p>Fatia grande</p>
-            <p>R$ 28,65</p>
+            <p class="dessert-price">R$ 28,65</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <div class="food-box" onclick="selectDessert(this);">
             <img src="images/dessert.jpg" alt="Torta de pêssego" />
-            <h4>Torta de pêssego</h4>
+            <h4 class="dessert-name">Torta de pêssego</h4>
             <p>Torta inteira</p>
-            <p>R$ 118,98</p>
+            <p class="dessert-price">R$ 118,98</p>
             <ion-icon name="checkmark-circle"></ion-icon>
           </div>
         </div>
       </div>
     </main>
     <footer>
-      <div class="select-items">
-        <p>Selecione 3 itens para fechar o pedido</p>
-      </div>
+      <a class="select-items" href="#" onclick="seeOrder();"
+        >Selecione 3 itens para fechar o pedido</a
+      >
     </footer>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
